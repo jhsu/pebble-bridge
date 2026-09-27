@@ -1,0 +1,13 @@
+services:
+  pebble-bridge:
+    image: ${PEBBLE_BRIDGE_IMAGE:-ghcr.io/jhsu/pebble-bridge:main}
+    restart: unless-stopped
+    ports:
+      - "${PORT:-9090}:9090"
+    env_file:
+      - .env
+    environment:
+      PORT: 9090
+      OUTBOUND_WEBHOOK_URL: ${OUTBOUND_WEBHOOK_URL:-http://host.docker.internal:8644/webhooks/pebble-msg}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
