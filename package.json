@@ -42,5 +42,8 @@
     "@types/node": "^26.6.2",
     "tsx": "^4.20.5",
     "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
