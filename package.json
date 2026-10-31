@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "express": "^5.1.0",
-    "multer": "^2.0.2"
+    "multer": "^2.5.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
